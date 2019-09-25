@@ -1,0 +1,58 @@
+package aluno;
+
+import java.util.Scanner;
+
+public class aluno{
+    public String nome;
+    public String sexo;
+    public String ra;
+    public String end;
+    public String email;
+    public int idade;
+    
+    public aluno(String nome, String sexo, String ra, String end, String email, int idade){
+        this.nome = nome;
+        this.sexo = sexo;
+        this.ra = ra;
+        this.end = end;
+        this.email = email;
+        this.idade = idade;
+        
+    }
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        aluno[] vet = new aluno[10000];
+        String nome, sexo, ra, endereco, email; 
+        int idade;
+                
+                
+        System.out.println("Digite os dados de 10000 alunos !");
+        
+        for(int x = 0; x < 10000; x++){
+            System.out.println("Nome: ");
+            nome = s.nextLine();s.nextLine();
+            System.out.println("Sexo (M/F): ");
+            sexo = s.nextLine();
+            System.out.println("RA: ");
+            ra = s.nextLine();
+            System.out.println("Endereco: ");
+            endereco = s.nextLine();
+            System.out.println("E-mail: ");
+            email = s.nextLine();
+            System.out.println("Idade: ");
+            idade = s.nextInt();                    
+            
+            
+            vet[x] = new aluno(nome, sexo, ra, endereco, email, idade);
+            
+        }
+        System.out.println(vet[0].nome);
+        
+       /* aluno a1 = new aluno("Bruno Takahashi", "M", "11910189", "Venda Nova", "bruno@bruno.com", 23);
+        System.out.println("Imprimindo nome do aluno A1" + a1.nome);
+        System.out.println("Imprimento sexo do aluno A1" + a1.sexo);
+        System.out.println("Imprimindo RA do aluno A1" + a1.ra);
+        */
+    }
+    
+}
